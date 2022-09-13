@@ -12,82 +12,26 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/6.9.96/css/materialdesignicons.min.css">
   <title>Trivia-DB</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select d-flex justify-content-between">
       <a class="navbar-brand ms-3" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
           loading="lazy">
         <span class="ms-2">Trivia-DB</span>
       </a>
+      <div class="px-4">
+        <button class="btn btn-info" onclick="app.questionsController.reloadPage()">Get New Questions <i class="mdi mdi-reload"></i></button>
+      </div>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
-      <div class="row p-5" id="Questions">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              <h3>Question</h3>
-            </div>
-            <div class="card-body">
-              <form onsubmit="app.questionsController.answerQuestion('id')" class="width-100">
-                <div class="d-flex width-100 justify-content-between">
-                  <select class="form-select me-4" name="answer">
-                    <option selected>Choose an Answer</option>
-                    <option value="answer-1">answer 1</option>
-                    <option value="answer-2">answer 2</option>
-                    <option value="answer-3">answer 3</option>
-                    <option value="answer-4">answer 4</option>
-                  </select>
-                  <button type="submit" class="btn btn-success">Answer!</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              <h3>Question</h3>
-            </div>
-            <div class="card-body">
-              <form onsubmit="app.questionsController.answerQuestion('id')" class="width-100">
-                <div class="d-flex width-100 justify-content-between">
-                  <select class="form-select me-4" name="answer">
-                    <option selected>Choose an Answer</option>
-                    <option value="true">true</option>
-                    <option value="false">false</option>
-                  </select>
-                  <button type="submit" class="btn btn-success">Answer!</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              <h3>Question</h3>
-            </div>
-            <div class="card-body">
-              <form onsubmit="app.questionsController.answerQuestion('id')" class="width-100">
-                <div class="d-flex width-100 justify-content-between">
-                  <select class="form-select me-4" name="answer">
-                    <option selected>Choose an Answer</option>
-                    <option value="true">true</option>
-                    <option value="false">false</option>
-                  </select>
-                  <button type="submit" class="btn btn-success">Answer!</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="row p-5" id="Questions"></div>
     </div>
   </main>
   <footer class="bg-dark text-light">
@@ -96,6 +40,10 @@
     </div>
   </footer>
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>

@@ -13,21 +13,24 @@ export class Question {
       let num = Math.round(Math.random()*3)
       if (num == 0) {
         return /*html*/`
-        <div class="col-md-6">
+        <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-header">
-              <h3>${this.question}</h3>
-              <h5>Category: ${this.category}, Difficulty: ${this.difficulty}, Type: ${this.type}</h5>
+              <h4>${this.question}</h4>
+              <div class="d-flex justify-content-between">
+                <h6>Category: ${this.category}, </h6>
+                <h6>Difficulty: ${this.difficulty}, </h6>
+                <h6>Type: ${this.type}</h6>
+              </div>
             </div>
             <div class="card-body">
-              <form onsubmit="app.questionsController.answerQuestion()" class="width-100">
+              <form onsubmit="app.questionsController.answerQuestion('${this.correct_answer}')" class="width-100">
                 <div class="d-flex width-100 justify-content-between">
                   <select class="form-select me-4" name="answer">
-                    <option selected>Choose an Answer</option>
-                    <option value="${this.correct_answer}">${this.correct_answer}</option>
+                    <option selected value="${this.correct_answer}">${this.correct_answer}</option>
                     <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
+                    <option value="${this.incorrect_answers[1]}">${this.incorrect_answers[1]}</option>
+                    <option value="${this.incorrect_answers[2]}">${this.incorrect_answers[2]}</option>
                   </select>
                   <button type="submit" class="btn btn-success">Answer!</button>
                 </div>
@@ -36,23 +39,26 @@ export class Question {
           </div>
         </div>
         `
-      } else if (num ==1) {
+      } else if (num == 1) {
         return /*html*/`
-        <div class="col-md-6">
+        <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-header">
-              <h3>${this.question}</h3>
-              <h5>Category: ${this.category}, Difficulty: ${this.difficulty}, Type: ${this.type}</h5>
+              <h4>${this.question}</h4>
+              <div class="d-flex justify-content-between">
+                <h6>Category: ${this.category}, </h6>
+                <h6>Difficulty: ${this.difficulty}, </h6>
+                <h6>Type: ${this.type}</h6>
+              </div>
             </div>
             <div class="card-body">
-              <form onsubmit="app.questionsController.answerQuestion()" class="width-100">
+              <form onsubmit="app.questionsController.answerQuestion('${this.correct_answer}')" class="width-100">
                 <div class="d-flex width-100 justify-content-between">
                   <select class="form-select me-4" name="answer">
-                    <option selected>Choose an Answer</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
+                    <option selected value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
                     <option value="${this.correct_answer}">${this.correct_answer}</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
+                    <option value="${this.incorrect_answers[1]}">${this.incorrect_answers[1]}</option>
+                    <option value="${this.incorrect_answers[2]}">${this.incorrect_answers[2]}</option>
                   </select>
                   <button type="submit" class="btn btn-success">Answer!</button>
                 </div>
@@ -63,21 +69,24 @@ export class Question {
         `
       } else if (num == 2) {
         return /*html*/`
-        <div class="col-md-6">
+        <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-header">
-              <h3>${this.question}</h3>
-              <h5>Category: ${this.category}, Difficulty: ${this.difficulty}, Type: ${this.type}</h5>
+              <h4>${this.question}</h4>
+              <div class="d-flex justify-content-between">
+                <h6>Category: ${this.category}, </h6>
+                <h6>Difficulty: ${this.difficulty}, </h6>
+                <h6>Type: ${this.type}</h6>
+              </div>
             </div>
             <div class="card-body">
-              <form onsubmit="app.questionsController.answerQuestion()" class="width-100">
+              <form onsubmit="app.questionsController.answerQuestion('${this.correct_answer}')" class="width-100">
                 <div class="d-flex width-100 justify-content-between">
                   <select class="form-select me-4" name="answer">
-                    <option selected>Choose an Answer</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
+                    <option selected value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
+                    <option value="${this.incorrect_answers[1]}">${this.incorrect_answers[1]}</option>
                     <option value="${this.correct_answer}">${this.correct_answer}</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
+                    <option value="${this.incorrect_answers[2]}">${this.incorrect_answers[2]}</option>
                   </select>
                   <button type="submit" class="btn btn-success">Answer!</button>
                 </div>
@@ -88,20 +97,23 @@ export class Question {
         `
       } else if (num == 3) {
         return /*html*/`
-        <div class="col-md-6">
+        <div class="col-md-6 mb-3">
           <div class="card">
             <div class="card-header">
-              <h3>${this.question}</h3>
-              <h5>Category: ${this.category}, Difficulty: ${this.difficulty}, Type: ${this.type}</h5>
+              <h4>${this.question}</h4>
+              <div class="d-flex justify-content-between">
+                <h6>Category: ${this.category}, </h6>
+                <h6>Difficulty: ${this.difficulty}, </h6>
+                <h6>Type: ${this.type}</h6>
+              </div>
             </div>
             <div class="card-body">
-              <form onsubmit="app.questionsController.answerQuestion()" class="width-100">
+              <form onsubmit="app.questionsController.answerQuestion('${this.correct_answer}')" class="width-100">
                 <div class="d-flex width-100 justify-content-between">
                   <select class="form-select me-4" name="answer">
-                    <option selected>Choose an Answer</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
-                    <option value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
+                    <option selected value="${this.incorrect_answers[0]}">${this.incorrect_answers[0]}</option>
+                    <option value="${this.incorrect_answers[1]}">${this.incorrect_answers[1]}</option>
+                    <option value="${this.incorrect_answers[2]}">${this.incorrect_answers[2]}</option>
                     <option value="${this.correct_answer}">${this.correct_answer}</option>
                   </select>
                   <button type="submit" class="btn btn-success">Answer!</button>
@@ -112,43 +124,26 @@ export class Question {
         </div>
         `
       }
-      return `
-      <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              <h3>Question</h3>
-            </div>
-            <div class="card-body">
-              <form onsubmit="app.questionsController.answerQuestion('id')" class="width-100">
-                <div class="d-flex width-100 justify-content-between">
-                  <select class="form-select me-4" name="answer">
-                    <option selected>Choose an Answer</option>
-                    <option value="answer-1">answer 1</option>
-                    <option value="answer-2">answer 2</option>
-                    <option value="answer-3">answer 3</option>
-                    <option value="answer-4">answer 4</option>
-                  </select>
-                  <button type="submit" class="btn btn-success">Answer!</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      `
     } else if (this.type == "boolean") {
-      return `
-      <div class="col-md-6">
+      let num = Math.round(Math.random())
+      if (num == 0) {
+        return /*html*/`
+        <div class="col-md-6 mb-3">
           <div class="card">
-            <div class="card-header">
-              <h3>Question</h3>
+          <div class="card-header">
+            <h4>${this.question}</h4>
+            <div class="d-flex justify-content-between">
+              <h6>Category: ${this.category}, </h6>
+              <h6>Difficulty: ${this.difficulty}, </h6>
+              <h6>Type: ${this.type}</h6>
             </div>
+          </div>
             <div class="card-body">
-              <form onsubmit="app.questionsController.answerQuestion('id')" class="width-100">
+              <form onsubmit="app.questionsController.answerQuestion('${this.correct_answer}')" class="width-100">
                 <div class="d-flex width-100 justify-content-between">
                   <select class="form-select me-4" name="answer">
-                    <option selected>Choose an Answer</option>
-                    <option value="true">true</option>
-                    <option value="false">false</option>
+                    <option selected value="${this.correct_answer}">${this.correct_answer}</option>
+                    <option value="${this.incorrect_answers}">${this.incorrect_answers}</option>
                   </select>
                   <button type="submit" class="btn btn-success">Answer!</button>
                 </div>
@@ -156,7 +151,34 @@ export class Question {
             </div>
           </div>
         </div>
-      `
+        `
+      } else if (num == 1) {
+        return /*html*/`
+        <div class="col-md-6 mb-3">
+          <div class="card">
+          <div class="card-header">
+            <h4>${this.question}</h4>
+            <div class="d-flex justify-content-between">
+              <h6>Category: ${this.category}, </h6>
+              <h6>Difficulty: ${this.difficulty}, </h6>
+              <h6>Type: ${this.type}</h6>
+            </div>
+          </div>
+            <div class="card-body">
+              <form onsubmit="app.questionsController.answerQuestion('${this.correct_answer}')" class="width-100">
+                <div class="d-flex width-100 justify-content-between">
+                  <select class="form-select me-4" name="answer">
+                  <option selected value="${this.incorrect_answers}">${this.incorrect_answers}</option>
+                  <option value="${this.correct_answer}">${this.correct_answer}</option>
+                  </select>
+                  <button type="submit" class="btn btn-success">Answer!</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        `
+      }
     }
   }
 }
